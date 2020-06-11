@@ -45,6 +45,31 @@
 			<!-- use the following artifactId if you don't need servlet 2.x compatibility -->
 			<!-- artifactId>jersey-container-servlet</artifactId -->
 		</dependency>
+		
+		<dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>javax.servlet-api</artifactId>
+             <version>3.0.1</version>
+             <scope>provided</scope>
+         </dependency>
+        
+        <dependency>
+            <groupId>mina-core-1.1.7</groupId>
+            <artifactId>mina-core-1.1.7</artifactId>
+            <version>1.1.7</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/mina-core-1.1.7.jar</systemPath>
+        </dependency>
+        
+        <dependency>
+            <groupId>simple-quickfix-1.0.3</groupId>
+            <artifactId>simple-quickfix-1.0.3</artifactId>
+            <version>1.0.3</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/simple-quickfix-1.0.3.jar</systemPath>
+        </dependency>
+        
+        
 		<!--<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
