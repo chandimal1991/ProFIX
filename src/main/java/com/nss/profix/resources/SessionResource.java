@@ -16,10 +16,9 @@ public class SessionResource {
 	SessionService sessionService = new SessionService();
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Session> getSessions() {
 		return sessionService.getSessionList();
 	}
-
 
 }
