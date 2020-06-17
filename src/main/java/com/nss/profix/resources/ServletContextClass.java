@@ -12,7 +12,8 @@ import simplefix.Session;
 public class ServletContextClass implements ServletContextListener {
 
 	private static EngineFactory _engineFact;
-	private Engine _engine;
+	public static Engine _engine;
+	
 
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
@@ -45,6 +46,10 @@ public class ServletContextClass implements ServletContextListener {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
+	
+    
 
 	private static class _Application implements Application {
 
