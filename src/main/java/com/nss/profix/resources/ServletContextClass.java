@@ -11,7 +11,7 @@ import simplefix.Session;
 
 public class ServletContextClass implements ServletContextListener {
 
-	private static EngineFactory _engineFact;
+	public static EngineFactory _engineFact;
 	public static Engine _engine;
 	
 
