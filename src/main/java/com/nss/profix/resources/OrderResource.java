@@ -6,7 +6,6 @@ import javax.ws.rs.PathParam;
 
 import com.nss.profix.fixservice.FIXService;
 import com.nss.profix.service.FIXServiceImpl;
-import com.nss.profix.service.OrderService;
 
 @Path("/order")
 public class OrderResource {

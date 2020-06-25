@@ -47,7 +47,7 @@ public class FIXServiceImpl implements FIXService {
 
 				_engine.startInProcess(application);
 
-				System.out.println("engine started");
+				System.out.println("new engine started");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
