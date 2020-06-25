@@ -19,6 +19,7 @@ public class SessionResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Session> getSessions() {
+		fixServiceImpl.init();
 		return fixServiceImpl.getSessions();
 	}
 	
