@@ -68,6 +68,24 @@ public class FIXServiceImpl implements FIXService {
 	}
 
 	@Override
+	public ArrayList<com.nss.profix.model.Session> getSessions() throws IllegalArgumentException {
+
+		ArrayList<com.nss.profix.model.Session> sessions = new ArrayList<com.nss.profix.model.Session>();
+		int sessionID = 1;
+		System.out.println("inside method");
+
+		for (Session session : _engine.getAllSessions()) {
+			System.out.println(session.getSenderCompID() + "<-->" + session.getTargetCompID());
+			com.nss.profix.model.Session sessionObj = new com.nss.profix.model.Session(sessionID,
+					session.getSenderCompID() + "<-->" + session.getTargetCompID());
+			sessions.add(sessionObj);
+			sessionID++;
+		}
+
+		return sessions;
+	}
+
+	@Override
 	public void sendOrder(String sessionId) throws IllegalArgumentException {
 
 		try {

@@ -8,21 +8,18 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.nss.profix.fixservice.FIXService;
 import com.nss.profix.model.Session;
 import com.nss.profix.service.FIXServiceImpl;
-import com.nss.profix.service.SessionService;
 
 @Path("/session")
 public class SessionResource {
 	
-	FIXService fixServiceImpl = new FIXServiceImpl();
-	SessionService sessionService = new SessionService();
+	FIXServiceImpl fixServiceImpl = new FIXServiceImpl(null);
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Session> getSessions() {
-		return sessionService.getSessionList();
+		return fixServiceImpl.getSessions();
 	}
 	
 	@GET
