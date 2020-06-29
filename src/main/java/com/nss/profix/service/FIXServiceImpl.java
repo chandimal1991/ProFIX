@@ -72,7 +72,6 @@ public class FIXServiceImpl implements FIXService {
 
 		ArrayList<com.nss.profix.model.Session> sessions = new ArrayList<com.nss.profix.model.Session>();
 		int sessionID = 1;
-		System.out.println("inside method");
 
 		for (Session session : _engine.getAllSessions()) {
 			System.out.println(session.getSenderCompID() + "<-->" + session.getTargetCompID());
@@ -91,11 +90,13 @@ public class FIXServiceImpl implements FIXService {
 		try {
 
 			for (Session session : _engine.getAllSessions()) {
+				
 
 				if (sessionId.equals(session.getSenderCompID() + "<-->" + session.getTargetCompID())) {
 
 					if (quickfix.Session.lookupSession(session.getSenderCompID(), session.getTargetCompID())
 							.isLoggedOn()) {
+						
 
 						Message ordMsg = _engineFact.createMessage(MsgType.ORDER_SINGLE);
 
